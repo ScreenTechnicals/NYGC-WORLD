@@ -50,7 +50,7 @@ const Page = () => {
       id: "card1",
     },
     {
-      name: "mountain1.jpg",
+      name: "temp3.png",
       id: "card3",
     },
   ];
@@ -70,7 +70,7 @@ const Page = () => {
               return (
                 <button
                   key={poster.id}
-                  className="w-[100px] h-[50px] overflow-hidden m-3 focus:scale-95 transition-all"
+                  className="w-[100px] h-[50px] overflow-hidden m-3 focus:scale-95 transition-all shadow-md border rounded-md"
                   type="button"
                   onClick={() => {
                     setCard(poster.id);
