@@ -1,5 +1,9 @@
+"use client";
+
 import Header from "./components/Header";
 import "./globals.css";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function RootLayout({ children }) {
   return (
@@ -14,6 +18,7 @@ export default function RootLayout({ children }) {
         ></link>
       </head>
       <body>
+        <ToastContainer />
         <Header />
         <div>{children}</div>
       </body>

@@ -9,13 +9,13 @@ import {ImSpinner2} from 'react-icons/im';
 
 const Page = ({params}) => {
     const id = params.id;
-    console.log(id);
+
     const greets = collection(db, "greets");
     const [greetSnap, loading] = useCollection(greets);
     const currentGreet = greetSnap?.docs?.filter((g)=> g?.id === id)?.[0]?.data();
-    console.log(currentGreet);
+
     if (loading) return (
-        <div className="w-screen h-screen z-[9999] bg-center bg-no-repeat bg-cover absolute top-0 left-0">
+        <div className="w-screen h-screen z-[9999] bg-center bg-no-repeat bg-cover absolute top-0 left-0 bg-[#f1f1f1] flex items-center justify-center">
             <ImSpinner2 className='inline-block animate-spin' />
         </div>
     )
