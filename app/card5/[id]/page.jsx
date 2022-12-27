@@ -32,7 +32,7 @@ const Page = ({params}) => {
     )
     
   return (
-    <div className="w-screen h-screen z-[999] bg-[url('/images/anya.jpg')] bg-center bg-no-repeat bg-cover absolute top-0 left-0">
+    <div className="w-screen h-screen z-[999] bg-[url('/images/love.jpg')] bg-center bg-no-repeat bg-cover absolute top-0 left-0">
         <div className='absolute top-0 left-0 bg-gradient-to-b from-[#0000008b] to-[#000000] w-screen h-screen text-white flex justify-center flex-col'>
             <Snowfall
             snowflakeCount={100}
