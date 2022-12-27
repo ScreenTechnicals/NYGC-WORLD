@@ -36,7 +36,7 @@ const Page = ({params}) => {
         <div className='absolute top-0 left-0 bg-gradient-to-b from-[#0000008b] to-[#000000] w-screen h-screen text-white flex justify-center flex-col'>
             <Snowfall
             snowflakeCount={100}
-            color="#f1f1f1"
+            color="red"
             />
             <div className='p-10'>
                 <h1 className='text-4xl font-jockey tracking-wider'>To</h1>

@@ -19,7 +19,10 @@ const Page = () => {
   } = useForm();
   const newId = v4();
   const [card, setCard] = useState("");
+  const [redirect, setRedirect] = useState(false);
+  
   const onSubmit = async (data) => {
+    setRedirect(true);
     if (data.greet.length >= 25 && data.from_user.length > 0 && data.to_user.length > 0 && card.length > 0) {
       await setDoc(doc(db, "greets", newId), {
         from_user: data.from_user,
@@ -53,10 +56,23 @@ const Page = () => {
       name: "temp3.png",
       id: "card3",
     },
+    {
+      name: "anya.jpeg",
+      id: "card4",
+    },
+    {
+      name: "love.jpg",
+      id: "card5",
+    },
   ];
 
   return (
     <div className="p-5">
+      {
+        redirect ? <div className="w-screen h-screen bg-[#00000067] absolute z-[9999] top-0 left-0 backdrop-blur-sm flex justify-center items-center">
+        <h1>Redirecting...</h1>
+      </div> : ""
+      }
       <h1 className="text-2xl text-center font-light font-jockey uppercase ">
         Give Your Well Wishes To Your Loved ❤️ Ones.
       </h1>
@@ -65,7 +81,7 @@ const Page = () => {
           <h2 className="text-xl text-center font-jockey mt-5">
             Select A Background Image:
           </h2>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center flex-wrap">
             {posters.map((poster) => {
               return (
                 <button
@@ -74,11 +90,12 @@ const Page = () => {
                   type="button"
                   onClick={() => {
                     setCard(poster.id);
+                    toast.success("Images has been selected successfully!");
                   }}
                 >
                   <Image
                     src={`/images/${poster.name}`}
-                    width={100}
+                    width={200}
                     height={100}
                   />
                 </button>
