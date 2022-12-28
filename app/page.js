@@ -20,27 +20,47 @@ const Page = () => {
   const newId = v4();
   const [card, setCard] = useState("");
   const [redirect, setRedirect] = useState(false);
-  
+
   const onSubmit = async (data) => {
     setRedirect(true);
-    if (data.greet.length >= 25 && data.from_user.length > 0 && data.to_user.length > 0 && card.length > 0) {
-      await setDoc(doc(db, "greets", newId), {
-        from_user: data.from_user,
-        to_user: data.to_user,
-        greet: data.greet,
-        cardId: card,
-      });
-      router.push(`/${card}/${newId}`);
-    } else if (data.from_user.length === 0) {
-        toast.warning("From Is Empty!");
-    }
-    else if (data.to_user.length === 0) {
-        toast.warning("To Is Empty!");
-    }
-    else if (card.length === 0) {
-        toast.warning("Image Not Selected!");
-    } else {
-        toast.warning("Message Is Too Short!");
+    if (card === "card3") {
+      if (data.from_user.length > 0 && data.to_user.length > 0 && card.length > 0) {
+        await setDoc(doc(db, "greets", newId), {
+          from_user: data.from_user,
+          to_user: data.to_user,
+          greet: data.greet,
+          cardId: card,
+        });
+        router.push(`/${card}/${newId}`);
+      } else if (data.from_user.length === 0) {
+          toast.warning("From Is Empty!");
+      }
+      else if (data.to_user.length === 0) {
+          toast.warning("To Is Empty!");
+      }
+      else if (card.length === 0) {
+          toast.warning("Image Not Selected!");
+      }
+    }else{
+      if (data.greet.length >= 25 && data.from_user.length > 0 && data.to_user.length > 0 && card.length > 0) {
+        await setDoc(doc(db, "greets", newId), {
+          from_user: data.from_user,
+          to_user: data.to_user,
+          greet: data.greet,
+          cardId: card,
+        });
+        router.push(`/${card}/${newId}`);
+      } else if (data.from_user.length === 0) {
+          toast.warning("From Is Empty!");
+      }
+      else if (data.to_user.length === 0) {
+          toast.warning("To Is Empty!");
+      }
+      else if (card.length === 0) {
+          toast.warning("Image Not Selected!");
+      } else {
+          toast.warning("Message Is Too Short!");
+      }
     }
   };
   const posters = [
@@ -90,7 +110,7 @@ const Page = () => {
                   type="button"
                   onClick={() => {
                     setCard(poster.id);
-                    toast.success("Images has been selected successfully!");
+                    toast.success("Image has been selected successfully!");
                   }}
                 >
                   <Image
@@ -146,6 +166,8 @@ const Page = () => {
               placeholder="Ex: I Love You"
               {...register("greet")}
               required
+              value={card === "card3" ? "No Greet Is Required": ""}
+              disabled={card === "card3" ? true : false}
             />
           </div>
           <div>
