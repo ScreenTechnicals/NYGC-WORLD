@@ -24,9 +24,9 @@ const Page = () => {
   const [redirect, setRedirect] = useState(false);
 
   const onSubmit = async (data) => {
-    setRedirect(true);
     if (card === "card3") {
       if (data.from_user.length > 0 && data.to_user.length > 0 && card.length > 0) {
+        setRedirect(true);
         await setDoc(doc(db, "greets", newId), {
           from_user: data.from_user,
           to_user: data.to_user,
@@ -45,6 +45,7 @@ const Page = () => {
       }
     }else{
       if (data.greet.length >= 25 && data.from_user.length > 0 && data.to_user.length > 0 && card.length > 0) {
+        setRedirect(true);
         await setDoc(doc(db, "greets", newId), {
           from_user: data.from_user,
           to_user: data.to_user,
@@ -91,7 +92,7 @@ const Page = () => {
   return (
     <div className="p-5">
       {
-        redirect ? <div className="w-screen h-screen bg-[#00000067] absolute z-[9999] top-0 left-0 backdrop-blur-sm flex justify-center items-center">
+        true ? <div className="w-screen h-screen bg-[#00000067] fixed z-[9999] top-0 left-0 backdrop-blur-sm flex justify-center items-center">
         <h1>Redirecting...</h1>
       </div> : ""
       }
