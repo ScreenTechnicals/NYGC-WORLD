@@ -17,10 +17,14 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         ></link>
       </head>
-      <body>
+      <body className="overflow-x-hidden">
         <ToastContainer />
         <Header />
-        <div>{children}</div>
+        <div className="">{children}</div>
+        <footer className="bg-black w-full text-white text-center p-5">
+          <h1 className="uppercase font-extralight">Vist my <a href="http://chinmaysa-portfolio.vercel.app/" target={"_blank"} className="text-yellow-500 underline">portfolio</a></h1>
+          <h1>All Rights Reserved By <a href="https://screentechnicals.com" target={"_blank"} className="text-orange-500 underline">Screen Technicals</a></h1>
+        </footer>
       </body>
     </html>
   );

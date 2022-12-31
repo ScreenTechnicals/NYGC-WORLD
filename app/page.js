@@ -8,6 +8,8 @@ import { db } from "../firebase";
 import { v4 } from "uuid";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import { AiFillCheckCircle } from "react-icons/ai";
+
 
 const Page = () => {
   const router = useRouter();
@@ -106,7 +108,7 @@ const Page = () => {
               return (
                 <button
                   key={poster.id}
-                  className="w-[100px] h-[50px] overflow-hidden m-3 focus:scale-95 transition-all shadow-md border rounded-md"
+                  className="w-[100px] h-[50px] overflow-hidden m-3 focus:scale-95 transition-all shadow-md border rounded-md relative"
                   type="button"
                   onClick={() => {
                     setCard(poster.id);
@@ -118,9 +120,13 @@ const Page = () => {
                     width={200}
                     height={100}
                   />
+                  {
+                    card == poster.id ? <AiFillCheckCircle className="absolute z-[999] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl text-[#ffd900]" /> : ""
+                  }
                 </button>
               );
             })}
+            
           </div>
           <div className="relative my-6">
             <label
@@ -166,7 +172,7 @@ const Page = () => {
               placeholder="Ex: I Love You"
               {...register("greet")}
               required
-              value={card === "card3" ? "No Greet Is Required": ""}
+              value={card === "card3" ? "No Greet Is Required": null}
               disabled={card === "card3" ? true : false}
             />
           </div>

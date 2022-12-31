@@ -39,6 +39,9 @@ const Page = ({params}) => {
             snowflakeCount={100}
             color="#dcdcdc"
             />
+            <div className='z-[999] absolute bottom-40 left-1/2 -translate-x-1/2'>
+             <a href="https://nygc-world.vercel.app/" className='z-[9999] font-bold text-center'>Click Me To Create Your Own </a>
+            </div>
             <div className='w-screen absolute bottom-10'>
                 <Image src="/gifs/crackers.gif" width={500} height={200} className="mx-auto" />
             </div>
@@ -60,8 +63,6 @@ const Page = ({params}) => {
                 {
                     musicButtons ? <button className='text-5xl motion-safe:animate-spin ' onClick={()=>{pauseMusic()}}><BsPauseCircleFill /></button> :  <button className='text-5xl' onClick={()=>{playMusic()}}><BsFillPlayCircleFill /></button>
                 }
-               
-                
             </div>
         </div>
         <div>

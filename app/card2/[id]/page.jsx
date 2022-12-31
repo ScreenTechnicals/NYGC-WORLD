@@ -38,6 +38,9 @@ const Page = ({params}) => {
             snowflakeCount={100}
             color="red"
             />
+            <div className='z-[999] absolute bottom-28 left-1/2 -translate-x-1/2 text-white'>
+                <a href="https://nygc-world.vercel.app/" className='z-[9999] font-bold text-center'>Click Me To Create Your Own </a>
+            </div>
             <div className='p-10'>
                 <h1 className='text-4xl font-jockey tracking-wider'>To</h1>
                 <h1 className='text-4xl font-jockey tracking-wider'>{currentGreet?.to_user}</h1>
