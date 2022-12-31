@@ -93,6 +93,7 @@ const Page = () => {
     <div className="p-5">
       {
         true ? <div className="w-screen h-screen bg-[#00000067] fixed z-[9999] top-0 left-0 backdrop-blur-sm flex justify-center items-center">
+          
         <h1>Redirecting...</h1>
       </div> : ""
       }
