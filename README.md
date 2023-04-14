@@ -1,5 +1,5 @@
 
-# Song-Player ♫
+# NYGC-WORLD ✨
 
 [NYGC-WORLD](https://github.com/ScreenTechnicals/NYGC-WORLD) ✨ is an open source web application made for listening songs. 
 
