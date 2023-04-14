@@ -1,3 +1,29 @@
+
+# Song-Player ♫
+
+[NYGC-WORLD](https://github.com/ScreenTechnicals/NYGC-WORLD) ✨ is an open source web application made for listening songs. 
+
+
+
+## Languages :
+Next Js, Firebase and Tailwind CSS
+
+
+## Features :
+
+- Web app
+- Create New Year Greetings
+- Share it with your fiends and loved ones!
+
+## Feedback :
+If you have any feedback, please reach out to us at my socials or you can comment.
+
+
+## Author
+
+- [@chinmayasa](https://www.github.com/ScreenTechnicals)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
