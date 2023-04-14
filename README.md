@@ -23,7 +23,7 @@ If you have any feedback, please reach out to us at my socials or you can commen
 
 - [@chinmayasa](https://www.github.com/ScreenTechnicals)
 
-
+##
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
