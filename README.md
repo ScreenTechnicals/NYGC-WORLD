@@ -15,6 +15,8 @@ Next Js, Firebase and Tailwind CSS
 - Create New Year Greetings
 - Share it with your fiends and loved ones!
 
+Each contributor who gives a star ⭐ will get a cool badge which you can add to your GitHub profile's readme or share on likedin😉
+
 ## Feedback :
 If you have any feedback, please reach out to us at my socials or you can comment.
 
